@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  image-rendering: pixelated;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: #fff;
+}
+*{
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --color-dark: #222831;
+  --color-gray: #393E46;
+  --color-primary: #00ADB5;
+  --color-danger: #F32424;
+}
+.card{
+  box-sizing: border-box;
+  width: 800px;
+  padding: 20px;
+  background-color: var(--color-gray);
+  border-radius: 1rem;
+  box-shadow: 2px 5px 5px 5px rgba(0,0,0,.2);
+}
+.card header{
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+  border-bottom: 1px solid gray
+}
+.btn_group{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.btn{
+  border: none;
+  border-radius: 3px;
+  font-size: large;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 160px;
+  height: 50px;
+}
+.btn:hover{
+  filter: brightness(0.9);
+}
+.btn:active{
+  filter: brightness(1.1);
+}
+.btn_danger{
+  margin-right: 30px;
+  background-color: var(--color-danger);
+  box-shadow: 0 6px 0 0 #b31e1e;
+}
+.btn_primary{
+  background-color: var(--color-primary);
+  box-shadow: 0 6px 0 0 #01838a;
+}
+.card_main{
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+}
+.card_main aside{
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+.tilemap-container{
+  position: relative;
+  flex: 1;
+}
+.tilemap_selection{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  outline: 3px solid #2485f3;
+}
+.card_right-column{
+  flex: 1;
+}
+.layers{
+  list-style: none;
+  padding: 0;
+}
+.layer{
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+.layer:hover{
+  filter: brightness(.6) ;
+}
+.selected{
+  color: var(--color-primary);
+  font-weight: bold;
+}
+canvas{
+  border: 1px solid var(--color-dark);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tile Map Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>Tile Map Editor</h1>
+      <div class="btn_group">
+        <button onclick="clearCanvas()" class="btn btn_danger">Clear Canvas</button>
+        <button onclick="exportImage()" class="btn btn_primary">Export PNG</button>
+      </div>
+    </header>
+
+    <div class="card_main">
+      <aside>
+        <div class="tilemap-container">
+          <img id="tilemap-source" src="" width="216">
+          <div class="tilemap_selection"></div>
+        </div>
+      </aside>
+      <div class="card_right-column">
+        <canvas width="480" height="480"></canvas>
+        <div>
+          <label>Select layer :</label>
+          <ul class="layers">
+            <li><button onclick="setLayer(0)" class="layer selected" layer="0">Top Layer</button></li>
+            <li><button onclick="setLayer(1)" class="layer" layer="1">Middle Layer</button></li>
+            <li><button onclick="setLayer(2)" class="layer" layer="2">Bottom Layer</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
